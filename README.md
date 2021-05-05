@@ -333,22 +333,19 @@ public class Sort {
 
 
 ## 실행 결과
-
-![image-20210505170057963](C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210505170057963.png)
+![image-20210505170057963](https://user-images.githubusercontent.com/73464584/117182624-8a209400-ae11-11eb-9a36-447af2c85434.png)
 
 
 
 ## 성능 평가
 
 #### 정렬별 데이터 비교
-
-![image-20210505190339185](C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210505190339185.png)
+![image-20210505190339185](https://user-images.githubusercontent.com/73464584/117182662-9ad10a00-ae11-11eb-81ec-ed2e4a38206f.png)
 
 
 
 #### 데이터별 정렬 비교
-
-![image-20210505190412903](C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210505190412903.png)
+![image-20210505190412903](https://user-images.githubusercontent.com/73464584/117182711-a9b7bc80-ae11-11eb-8195-2944a0e655e1.png)
 
 1. 버블 정렬
 

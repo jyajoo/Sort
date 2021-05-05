@@ -273,5 +273,117 @@ class SortedData extends CreateArray implements InputData { //(3) 내림차순 �
 
 
 
+#### main
+
+```java
+public class Sort {
+
+    public static void main(String[] args) {
+
+        System.out.println("정렬하고자 하는 데이터 길이(n)을 입력해주세요.");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();                 //정렬하고자 하는 데이터의 길이를 입력받는다.
+
+        System.out.println("(1) 랜덤한 입력 배열");
+        RandomData randomData = new RandomData();
+        int[] randomArray = randomData.makeData(n);
+        printArray(randomArray);
+        Data_Sort(randomArray);
+
+        System.out.println("(2) 어느정도 정렬된 입력 배열");
+        AlmostSortedData almostSortedData = new AlmostSortedData();
+        int[] partSortedArray = almostSortedData.makeData(n);
+        printArray(partSortedArray);
+        Data_Sort(partSortedArray);
+
+        System.out.println("(3) 내림차순 정렬된 입력 배열");
+        SortedData sortedData = new SortedData();
+        int[] sortedArray = sortedData.makeData(n);
+        printArray(sortedArray);
+        Data_Sort(sortedArray);
+    }
+
+    private static void Data_Sort(int[] inputArray) {
+
+        System.out.println("[버블 정렬]");
+        BubbleSort bubbleSort = new BubbleSort();
+        printArray(bubbleSort.sortArray(inputArray));
+        System.out.println("[선택 정렬]");
+        SelectionSort selectionSort = new SelectionSort();
+        printArray(selectionSort.sortArray(inputArray));
+        System.out.println("[삽입 정렬]");
+        InsertionSort insertionSort = new InsertionSort();
+        printArray(insertionSort.sortArray(inputArray));
+        System.out.println("[쉘 정렬]");
+        ShellSort shellSort = new ShellSort();
+        printArray(shellSort.sortArray(inputArray));
+        System.out.println();
+    }
+
+    private static void printArray(int[] A) {
+
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + " ");
+        }
+        System.out.println();
+    }
+}
+```
+
+
+
+## 실행 결과
+
+![image-20210505170057963](C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210505170057963.png)
+
+
+
 ## 성능 평가
+
+#### 정렬별 데이터 비교
+
+![image-20210505190339185](C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210505190339185.png)
+
+
+
+#### 데이터별 정렬 비교
+
+![image-20210505190412903](C:\Users\82106\AppData\Roaming\Typora\typora-user-images\image-20210505190412903.png)
+
+1. 버블 정렬
+
+   - 시간 복잡도 : O(n^2)
+
+   - 입력 배열이 랜덤, 어느정도 정렬된, 역방향 배열일 경우, O(n^2)
+
+   - 입력 배열이 이미 모두 정렬이 되어있는 경우(best), O(n)
+
+2. 선택 정렬
+
+   - 시간 복잡도 : O(n^2)
+
+   - 입력 배열이 랜덤, 어느정도 정렬된, 역방향 배열일 경우, O(n^2)
+
+   - 입력에 민감하지 않은 알고리즘. 항상 일정한 시간복잡도를 가진다.
+
+3. 삽입 정렬
+
+   - 시간 복잡도 : O(n^2)
+
+   - 다른 알고리즘들보다 시간이 더 적게 걸린다.
+
+   - 입력 배열이 랜덤, 어느정도 정렬된, 역방향 배열일 경우, O(n^2)
+
+   - 입력 배열이 이미 모두 정렬이 되어있는 경우(best), O(n)
+
+4. 쉘 정렬
+
+   - 시간 복잡도 : O(n^1.5)
+   - 입력 배열이 랜덤일 경우(worst), O(n^2)
+   - 입력 배열이 이미 모두 정렬이 되어있는 경우(best), O(n)
+
+   
+
+- 삽입 정렬이 다른 알고리즘보다 실행 시간이 더 적게 걸린다.
+- 버블 정렬은 다른 알고리즘보다 실행 시간이 더 많이 걸린다.
 

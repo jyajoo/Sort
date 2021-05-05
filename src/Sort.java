@@ -67,7 +67,7 @@ class AlmostSortedData extends CreateArray implements InputData { // (2) 어느�
     }
 }
 
-class SortedData extends CreateArray implements InputData { //(3) 내림차순 정렬된 입력 배열
+class SortedData extends CreateArray implements InputData { // (3) 내림차순 정렬된 입력 배열
 
     @Override
     public int[] makeData(int n) {
@@ -183,22 +183,22 @@ public class Sort {
         RandomData randomData = new RandomData();
         int[] randomArray = randomData.makeData(n);
         printArray(randomArray);
-        Data_Sort(n, randomArray);
+        Data_Sort(randomArray);
 
         System.out.println("(2) 어느정도 정렬된 입력 배열");
         AlmostSortedData almostSortedData = new AlmostSortedData();
         int[] partSortedArray = almostSortedData.makeData(n);
         printArray(partSortedArray);
-        Data_Sort(n, partSortedArray);
+        Data_Sort(partSortedArray);
 
         System.out.println("(3) 내림차순 정렬된 입력 배열");
         SortedData sortedData = new SortedData();
         int[] sortedArray = sortedData.makeData(n);
         printArray(sortedArray);
-        Data_Sort(n, sortedArray);
+        Data_Sort(sortedArray);
     }
 
-    private static void Data_Sort(int n, int[] inputArray) {
+    private static void Data_Sort(int[] inputArray) {
 
         System.out.println("[버블 정렬]");
         BubbleSort bubbleSort = new BubbleSort();

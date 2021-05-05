@@ -181,7 +181,7 @@ public class Sort {
 
         System.out.println("(1) 랜덤한 입력 배열");
         RandomData randomData = new RandomData();
-        int[] randomArray = randomData.makeData(n);// 1. 랜덤한 데이터
+        int[] randomArray = randomData.makeData(n);
         printArray(randomArray);
         Data_Sort(n, randomArray);
 

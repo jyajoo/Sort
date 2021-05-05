@@ -136,7 +136,7 @@ class InsertionSort implements SortMethod {   // 3. 삽입 정렬
 
         int n = A.length;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i < n; i++) {
             int currentElement = A[i];
             int j = i - 1;
             while (j >= 0 && currentElement < A[j]) {
@@ -149,7 +149,7 @@ class InsertionSort implements SortMethod {   // 3. 삽입 정렬
     }
 }
 
-class ShellSort implements SortMethod {   // 4. 쉘 정렬렬
+class ShellSort implements SortMethod {   // 4. 쉘 정렬
 
     @Override
     public int[] sortArray(int[] A) {
